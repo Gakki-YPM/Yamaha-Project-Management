@@ -1,3 +1,18 @@
+/* RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+
+
 /* THAINA */ 
 
 #botao {
@@ -20,21 +35,50 @@ H1{
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+    background-color: #f2f2f2;
 }
 
 #usuario, #logo {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
 }
 
+#usuario p {
+    margin-right: 1rem;
+}
 
+#linhavermelha {
+    padding: 0.4em;
+    background-color: #E53420;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #0A0A6A;
+    max-width: 5%;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 /* FRED */ 
-#foto {
-    width: 68.81px;
-    height: 70px;
-    left: 1317px;
-    top: 25px;
-    border-color: white;
 
+
+
+
+
+
+
+
+/* PEDRO */
+#adicionar-func{
+    border-style: none;
+    color: white;
+    background-color: #0A0A6A;
+    padding: 10px;
 }
