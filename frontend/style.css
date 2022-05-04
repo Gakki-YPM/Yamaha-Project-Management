@@ -7,7 +7,6 @@
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     box-sizing: border-box;
-    border: none;
     outline: none;
 }
 
@@ -15,23 +14,37 @@ a {
     text-decoration: none;
 }
 
-
+.contents {
+    display: flex;
+}
 
 /* THAINA */ 
+#novo-projeto{
+    text-align: center;
+    width: 100%;
+}
 
 #botao {
     border-radius: 30px;
-    background-color:#0A0A6A;
+    background-color:#0729d8;
     color:white;
     padding: 10px;
+    margin: 30px;
     }
-P{
-     text-align: center;
-}
-H1{
-    text-align: center;
-}
 
+#novo-projeto p{
+     text-align: center;
+     margin: 10px;
+}
+#novo-projeto h1{
+    text-align: center;
+    /* margin: 30px; */
+    font-size: 50px;
+}
+#novo-projeto h2{
+    text-align: center;
+    /* margin:50px; */
+}
 /* SERGJAO */ 
 
 #header {
@@ -63,7 +76,7 @@ H1{
     display: flex;
     flex-direction: column;
     background-color: #0A0A6A;
-    max-width: 5%;
+    min-width: 7.5%;
     height: 100vh;
     justify-content: space-evenly;
     align-items: center;
@@ -81,11 +94,91 @@ H1{
 
 
 
-
 /* PEDRO */
 #adicionar-func{
     border-style: none;
     color: white;
     background-color: #0A0A6A;
     padding: 10px;
+    border-radius: 20px;
+}
+
+.adicionar-func{
+    font-size: 2em;
+    text-align: center;
+}
+
+select{
+    width: 40%;
+    height: 60%;
+}
+
+.container p{
+    text-align: center;
+}
+
+
+/* GUTO */
+
+#pagina-login{
+    display: flex;
+    flex-direction: column;
+}
+#login {
+    display: flex;
+    flex-direction: row;
+}
+
+#login img {
+    width: 85vh;
+    height: 100vh;
+}
+#texto_bem_vindo{
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+
+}
+#login_texto{
+    font-size: 32px;
+    display: flex;
+    justify-content:flex-start;
+
+}
+#indentifique_texto{
+    font-size: 20px;
+    height: 23px;
+    width: 372px;
+    left: 804px;
+    top: 327px;
+    border-radius: nullpx;
+
+}
+#Registro{
+    height: 92px;
+    width: 499px;
+    left: 804px;
+    top: 390px;
+    border-radius: 0px;
+
+
+}
+#senha{
+    height: 92px;
+    width: 499px;
+    left: 804px;
+    top: 512px;
+    border-radius: 0px;
+
+}
+
+
+
+/* BIA */ 
+
+#cont-tabela {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
 }
