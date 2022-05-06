@@ -77,6 +77,7 @@ a {
     flex-direction: column;
     background-color: #0A0A6A;
     min-width: 7.5%;
+    max-width: 7.5%;
     height: 100vh;
     justify-content: space-evenly;
     align-items: center;
@@ -86,9 +87,24 @@ a {
     color: #fff;
 }
 
+#juntano {
+    display: flex;
+}
+
+#tables {
+    
+}
+
 /* FRED */ 
-
-
+#grafico {
+    margin: auto;
+    text-align: center;
+}
+.info {
+    margin: 0px;
+    text-align: center;
+    justify-content: space-between;
+}
 
 
 
@@ -101,6 +117,10 @@ a {
     background-color: #0A0A6A;
     padding: 10px;
     border-radius: 20px;
+}
+
+#adicionar-func:hover{
+    background-color: rgb(66, 66, 170);
 }
 
 .adicionar-func{
@@ -117,6 +137,10 @@ select{
     text-align: center;
 }
 
+#btnradio1{
+    background-color: red;
+}
+
 
 /* GUTO */
 
@@ -130,47 +154,76 @@ select{
 }
 
 #login img {
-    width: 85vh;
+    width: 125vh;
     height: 100vh;
 }
 #texto_bem_vindo{
-    font-size: 32px;
+    align-self: center;
     display: flex;
-    justify-content: center;
-    margin: 30px;
+    margin: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
 
 }
 #login_texto{
-    font-size: 32px;
     display: flex;
     justify-content:flex-start;
+    margin: 1px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
 
 }
 #indentifique_texto{
     font-size: 20px;
-    height: 23px;
-    width: 372px;
-    left: 804px;
-    top: 327px;
-    border-radius: nullpx;
+    margin: 1px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
 
+}
+
+#exampleInputEmail1{
+    width: 499px;
+    height: 60px;
+    left: 804px;
+    top: 422px;
+}
+#exampleInputPassword1{
+    width: 499px;
+    height: 60px;
+    left: 804px;
+    top: 544px;
+}
+.botao_acessar{
+    width: 499px;
+    height: 60px;
+    background: #0A0A6A;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
 }
 #Registro{
-    height: 92px;
-    width: 499px;
-    left: 804px;
-    top: 390px;
-    border-radius: 0px;
-
-
-}
-#senha{
-    height: 92px;
-    width: 499px;
-    left: 804px;
-    top: 512px;
-    border-radius: 0px;
-
+    display: flex
+    align-items: center;
 }
 
 
