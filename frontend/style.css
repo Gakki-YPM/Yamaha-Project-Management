@@ -174,12 +174,14 @@ select{
     display: flex;
     justify-content:flex-start;
     margin: 1px;
+}
+
+#login_texto h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
     line-height: 38px;
-
 }
 #indentifique_texto{
     font-size: 20px;
