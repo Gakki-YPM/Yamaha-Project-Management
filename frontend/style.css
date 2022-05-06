@@ -154,13 +154,13 @@ select{
 }
 
 #login img {
-    width: 90vh;
+    width: 80vh;
     height: 100vh;
 }
 #texto_bem_vindo{
     align-self: center;
     display: flex;
-    margin: 50px;
+    margin: 60px;
 
 
 
@@ -228,9 +228,12 @@ select{
     
     color: #FFFFFF;
 }
+
 #Registro{
     display: flex
     align-items: center;
+    margin: 19px;
+
 }
 
 
