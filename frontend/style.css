@@ -154,20 +154,24 @@ select{
 }
 
 #login img {
-    width: 125vh;
+    width: 90vh;
     height: 100vh;
 }
 #texto_bem_vindo{
     align-self: center;
     display: flex;
     margin: 50px;
+
+
+
+}
+#texto_bem_vindo h1{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-
 
 }
 #login_texto{
@@ -184,16 +188,17 @@ select{
     line-height: 38px;
 }
 #indentifique_texto{
-    font-size: 20px;
     margin: 1px;
+}
+
+#indentifique_texto h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-
+    
 }
-
 #exampleInputEmail1{
     width: 499px;
     height: 60px;
