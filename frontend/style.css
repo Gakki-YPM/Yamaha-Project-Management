@@ -91,10 +91,6 @@ a {
     display: flex;
 }
 
-#tables {
-    
-}
-
 /* FRED */ 
 #grafico {
     margin: auto;
@@ -139,6 +135,10 @@ select{
 
 #btnradio1{
     background-color: red;
+}
+
+.btn-group{
+    margin-left: 10px;
 }
 
 
