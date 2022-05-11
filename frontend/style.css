@@ -45,6 +45,11 @@ a {
     text-align: center;
     /* margin:50px; */
 }
+
+#adicionar-projeto{
+    font-size: 2em;
+    text-align: center;
+}
 /* SERGJAO */ 
 
 #header {
@@ -92,16 +97,13 @@ a {
 }
 
 /* FRED */ 
-#grafico {
-    margin: auto;
-    text-align: center;
-}
-.info {
-    margin: 0px;
-    text-align: center;
-    justify-content: space-between;
+#barGrafico{
+    width: 10%;
 }
 
+.graphs{
+    background-color: #f2f2f2;
+}
 
 
 
@@ -143,7 +145,34 @@ select{
 
 
 /* GUTO */
+.login{
+    padding: 50px;
+}
 
+.login input{
+    width: 300px;
+    height: 40px;
+}
+
+.login button a{
+    text-decoration: none;
+    color: white;
+}
+
+.login button{
+    width: 300px;
+}
+
+.login h1{
+    font-family: 'Roboto';
+    font-weight: bold;
+    width: 90%;
+}
+
+.login h2{
+    font-family: 'Roboto';
+    font-weight: bold;
+}
 #pagina-login{
     display: flex;
     flex-direction: column;
@@ -161,8 +190,6 @@ select{
     align-self: center;
     display: flex;
     margin: 60px;
-
-
 
 }
 #texto_bem_vindo h1{

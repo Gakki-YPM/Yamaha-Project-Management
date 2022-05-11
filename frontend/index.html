@@ -11,41 +11,24 @@
     <title>Yamaha-Project-Management</title>
 </head>
 <body>
-    <div id="login">
-        <img 
-            src="../Imagens/arte_login.png" 
-            alt=""
-        >
-        <div id="pagina-login">
-            <div id="texto_bem_vindo">
-            <h1>Bem vindo ao Yamaha Project Management! </h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <img src="../Imagens/arte_login.png" class="img-fluid" alt="...">
             </div>
-            <div id="login_texto">
-            <h1>Login </h1>
+            <div class="col-6 login">
+                <h1>Bem vindo(a) ao Yamaha Project Management!</h1>
+                <h2 class="mt-5">Login</h2>
+                <p>Identifique-se para acessar a ferramenta</p>
+                <label for="registro">Registro de funcionário</label>
+                <br>
+                <input type="text" name="registro" id="registro">
+                <br>
+                <label for="senha" class="mt-3">Senha</label>
+                <br>
+                <input type="password" name="senha" id="senha">
+                <br>
+                <button id="adicionar-func" class="mt-5"><a href="../frontend/home.html">Acessar a ferramenta</a></button>
             </div>
-            <div id="indentifique_texto">
-            <h1>Identifique-se para acessar a ferramenta </h1>
-            </div>
-            <div id="Registro">
-                </div>
-                <form>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Registro de Funcionário</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Senha</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                  </form>
-            <a href="http://127.0.0.1:5500/frontend/home.html">
-             <button type="button" class="botao_acessar" >
-                 <p>Acessar a Ferramenta</p>
-             </button>
-            </a>
-        </div>
-        </div>
-    </div>
-
 </body>
 </html>
