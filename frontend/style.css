@@ -145,8 +145,14 @@ select{
 
 
 /* GUTO */
+.img-fluid{
+    position: relative;
+    right: 15px;
+}
 .login{
     padding: 50px;
+    position: relative;
+    left: 50px;
 }
 
 .login input{
