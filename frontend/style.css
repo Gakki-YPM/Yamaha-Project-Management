@@ -1,4 +1,5 @@
 /* RESET CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
 * {
     margin: 0;
@@ -8,6 +9,7 @@
     font-weight: normal;
     box-sizing: border-box;
     outline: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -47,7 +49,6 @@ a {
 }
 
 #adicionar-projeto{
-    font-size: 2em;
     text-align: center;
 }
 /* SERGJAO */ 
@@ -105,11 +106,22 @@ a {
     background-color: #f2f2f2;
 }
 
-
-
-
 /* PEDRO */
-#adicionar-func{
+.info-extras{
+    background-color: #F2F2F2;
+    height: 150px;
+}
+
+.info-extras h3{
+    text-align: center;
+}
+
+.tabela-projetos{
+    background-color: #F2F2F2;
+    height: 350px;
+}
+
+.adicionar-func{
     border-style: none;
     color: white;
     background-color: #0A0A6A;
@@ -117,17 +129,16 @@ a {
     border-radius: 20px;
 }
 
-#adicionar-func:hover{
+.adicionar-func:hover{
     background-color: rgb(66, 66, 170);
 }
 
-.adicionar-func{
-    font-size: 2em;
+#adicionar-func{
     text-align: center;
 }
 
 select{
-    width: 40%;
+    width: 35%;
     height: 60%;
 }
 

@@ -1,5 +1,7 @@
-//Gráfico bar
+// Gráfico de barra
+// Selecionando o elemento com o id barGrafico
 let barGrafico = document.getElementById('barGrafico');
+// Criando as configurações do gráfico
 const config = {
     type: 'bar',
     data: { labels: [
@@ -25,13 +27,15 @@ const config = {
       ],
     }],
     }
-}
+};
+// Instanciando um novo gráfico, passando como argumento o elemento que armazenará o gráfico e a variável que contém as informações do gráfico
+let myBarGrafico = new Chart(barGrafico, config);
 
-let myGraph = new Chart(barGrafico, config);
-//Gráfico bar
 
-//Gráfico pie
+// Gráfico pizza
+// Selecionando o elemento com o id pieGrafico
 let pieGrafico = document.getElementById('pieGrafico');
+// Criando as configurações do gráfico
 const dataPie = {
     labels: [
       'Programadores',
@@ -54,15 +58,16 @@ const dataPie = {
     type: 'pie',
     data: dataPie,
 };  
-
-
+// Instanciando um novo gráfico, passando como argumento o elemento que armazenará o gráfico e a variável que contém as informações do gráfico
 let myPieGrafico = new Chart(pieGrafico, configPie);
-// Gráfico pie
 
 
-// Gráfico line
+
+// Gráfico de linha
+// Selecionando o elemento com o id lineGrafico
 let lineGrafico = document.getElementById('lineGrafico');
 
+// Criando as configurações do gráfico
 const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
 const dataLine = {
   labels: labels,
@@ -80,5 +85,5 @@ const configLine = {
     data: dataLine,
 };
 
+// Instanciando um novo gráfico, passando como argumento o elemento que armazenará o gráfico e a variável que contém as informações do gráfico
 let myLineGrafico = new Chart(lineGrafico, configLine);
-// Gráfico line
