@@ -82,3 +82,33 @@ const configLine = {
 
 let myLineGrafico = new Chart(lineGrafico, configLine);
 // Gráfico line
+
+// Gráfico Polar
+
+let polarGrafico = document.getElementById('polarGrafico'); 
+
+const dataPolar = {
+  labels: [
+    'Sobrecarregado',
+    'Abaixo do Carga',
+    'Quase no Limite',
+    'Carga completa'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [11, 16, 7, 3],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(75, 192, 192)',
+      'rgb(255, 205, 86)',
+      'rgb(54, 162, 235)'
+    ]
+  }]
+};
+
+const configPolar = {
+  type: 'polarArea',
+  data: dataPolar,
+};
+
+let myPolarGrafico = new Chart(polarGrafico, configPolar);

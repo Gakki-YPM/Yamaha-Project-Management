@@ -1,37 +1,65 @@
 //PEDRO
-let botaoSim =  document.getElementById('btnradio1');
-let botaoNao = document.getElementById('btnradio2');
 
-let tipo1 = document.getElementById('labelTipo1');
-let tipo2 = document.getElementById('labelTipo2');
+if (document.title === 'Cadastrar Funcionário')
+{
+    let botaoSim =  document.getElementById('btnradio1');
+    let botaoNao = document.getElementById('btnradio2');
 
-let tipoPosicao1 = document.getElementById('tipo1');
-let tipoPosicao2 = document.getElementById('tipo2');
+    let tipo1 = document.getElementById('labelTipo1');
+    let tipo2 = document.getElementById('labelTipo2');
 
-botaoSim.addEventListener('click', () =>{
-    if(botaoSim.checked){
+    let tipoPosicao1 = document.getElementById('tipo1');
+    let tipoPosicao2 = document.getElementById('tipo2');
 
-        tipoPosicao1.setAttribute('name', 'registro');
-        tipoPosicao2.setAttribute('name', 'governanca');
+    botaoSim.addEventListener('click', () =>{
+        if(botaoSim.checked){
 
-        tipo1.innerHTML = 'Registro';
-        tipo2.innerHTML = 'Governança';
+            tipoPosicao1.setAttribute('name', 'registro');
+            tipoPosicao2.setAttribute('name', 'governanca');
 
-        console.log(tipoPosicao1);
-        console.log(tipoPosicao2);
+            tipo1.innerHTML = 'Registro';
+            tipo2.innerHTML = 'Governança';
+
+            console.log(tipoPosicao1);
+            console.log(tipoPosicao2);
+        }
+    });
+
+    botaoNao.addEventListener('click', () =>{
+        if(botaoNao.checked){
+
+            tipoPosicao1.setAttribute('name', 'empresa');
+            tipoPosicao2.setAttribute('name', 'duracaocontrato');
+
+            tipo1.innerHTML = 'Empresa';
+            tipo2.innerHTML = 'Duração do contrato';
+
+            console.log(tipoPosicao1);
+            console.log(tipoPosicao2);
+        }
+    });
+}
+// SERGJAO
+
+    // Adicionar classe "Selecionado" na div atual
+
+    let list = document.querySelectorAll('.navbar li');
+
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered')
     }
-});
+    list.forEach((item) =>
+    item.addEventListener('mouseover', activeLink));
 
-botaoNao.addEventListener('click', () =>{
-    if(botaoNao.checked){
+    // Esconder o menu da navbar
 
-        tipoPosicao1.setAttribute('name', 'empresa');
-        tipoPosicao2.setAttribute('name', 'duracaocontrato');
+    let toggle = document.querySelector('.toggle');
+    let navbar = document.querySelector('.navbar');
+    let main = document.querySelector('.main');
 
-        tipo1.innerHTML = 'Empresa';
-        tipo2.innerHTML = 'Duração do contrato';
-
-        console.log(tipoPosicao1);
-        console.log(tipoPosicao2);
+    toggle.onclick = function(){
+        navbar.classList.toggle('active');
+        main.classList.toggle('active');
     }
-});
