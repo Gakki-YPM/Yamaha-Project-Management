@@ -18,7 +18,7 @@ if (document.title === 'Cadastrar Funcionário')
             tipoPosicao2.setAttribute('name', 'governanca');
 
             tipo1.innerHTML = 'Registro';
-            tipo2.innerHTML = 'Governança';
+            tipo2.innerHTML = 'Área';
 
             console.log(tipoPosicao1);
             console.log(tipoPosicao2);

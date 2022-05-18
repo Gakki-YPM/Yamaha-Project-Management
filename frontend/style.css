@@ -27,18 +27,9 @@ thead
 {
     pointer-events: none;
 }
-
-/* body
-{
-    min-height: 100vh;
-    overflow-x: hidden;
-} */
-
 .contents {
     display: flex;
 }
-
-/* SERGJAO */ 
 
 .container
 {
@@ -690,9 +681,11 @@ thead
  }
  
  .container.mt-5 .rows .row1 p,
+ .container.mt-5 .rows .row1 label,
  .container.mt-5 .rows .row2 p,
  .container.mt-5 .rows .row3 p,
- .container.mt-5 .rows .row4 p
+ .container.mt-5 .rows .row4 p,
+ .container.mt-5 .rows .row7
  {
      text-align: start;
      margin: 0 0 5px 15px;
@@ -772,11 +765,11 @@ thead
      margin-right: 20px;
  }
  
- /* FIM SERJO */ 
-/* GUTO */
 .img-fluid{
     position: relative;
     right: 15px;
+    height: 100vh;
+    width: 50vw;
 }
 .login{
     padding: 50px;
@@ -795,7 +788,12 @@ thead
 }
 
 .login button{
-    width: 300px;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 80px;
+    color: var(--primaria);
+    background: var(--secundaria);
+    font-weight: bold;
 }
 
 .login h1{
@@ -895,4 +893,21 @@ thead
     display: flex;
     align-items: center;
     margin: 19px;
+}
+
+.row 
+{
+    display: flex;
+}
+
+.col-6.login.mt-3 {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.col-6 {
+    display: contents;
 }
