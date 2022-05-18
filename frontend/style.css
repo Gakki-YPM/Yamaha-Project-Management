@@ -133,7 +133,7 @@ thead
     transition: 0.5s;
 }
 
-.navbar ul li a .icon .fa-solid,
+.navbar ul li a .icon .fa-solid
 {
     font-size: 1em;
 }
@@ -892,8 +892,7 @@ thead
 }
 
 #Registro{
-    display: flex
+    display: flex;
     align-items: center;
     margin: 19px;
-
 }
