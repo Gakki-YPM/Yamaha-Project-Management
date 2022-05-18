@@ -16,136 +16,143 @@
     <title>Cadastrar Funcionário</title>
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-          <ul>
-            <li>
-              <a href="home.html">
-                <span class="icon">
-                  <img src="../Imagens/yamahalogo.svg">
-                </span>
-                <span class="title">
-                  <img src="../Imagens/yamahaname.svg">
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="novo_projeto.html">
-                <span class="icon">
-                  <i class="fa-solid fa-file-circle-plus fa-lg"></i>
-                </span>
-                <span class="title">Novo Projeto</span>
-              </a>
-            </li>
-            <li>
-              <a href="home.html">
-                <span class="icon">
-                  <i class="fa-solid fa-house fa-lg"></i>
-                </span>
-                <span class="title">Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="graficos.html">
-                <span class="icon">
-                  <i class="fa-solid fa-chart-line fa-lg"></i>
-                </span>
-                <span class="title">Estatisticas</span>
-              </a>
-            </li>
-            <li>
-              <a href="tabela_funcionarios.html">
-                <span class="icon">
-                  <i class="fa-solid fa-users fa-lg"></i>
-                </span>
-                <span class="title">Funcionários</span>
-              </a>
-            </li>
-          </ul>
+  <div class="container">
+    <div class="navbar">
+      <ul>
+        <li>
+          <a href="home.html">
+            <span class="icon">
+              <img src="../Imagens/yamahalogo.svg">
+            </span>
+            <span class="title">
+              <img src="../Imagens/yamahaname.svg">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="novo.html">
+            <span class="icon">
+              <i class="fa-solid fa-circle-plus fa-lg"></i>
+            </span>
+            <span class="title">Adicionar Novo...</span>
+          </a>
+        </li>
+        <li>
+          <a href="home.html">
+            <span class="icon">
+              <i class="fa-solid fa-house fa-lg"></i>
+            </span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="graficos.html">
+            <span class="icon">
+              <i class="fa-solid fa-chart-line fa-lg"></i>
+            </span>
+            <span class="title">Estatisticas</span>
+          </a>
+        </li>
+        <li>
+          <a href="tabela_funcionarios.html">
+            <span class="icon">
+              <i class="fa-solid fa-table-columns fa-lg"></i>
+            </span>
+            <span class="title">Tabelas</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="main">
-          <div class="topbar">
-            <div class="toggle">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="search">
-              <label>
-                <input type="text" placeholder="Procure Aqui...">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </label>
-            </div>
-            <div class="user">
-              <img src="../Imagens/user_img.png" alt="">
-            </div>
-          </div>
-            <div class="container mt-5">
-        <h1 class="adicionar-func">Adicionar novo funcionário</h1>
-        <p>Coloque as informações conforme o necessário.</p>
-        <div class="row">
-            <div class="offset-3 col-3">
-                <label for="nome">Nome</label>
-                <br>
-                <input type="text" name="nome" id="nome">
-            </div>
-            <div class="col-6">
-                <label for="sobrenome">Sobrenome</label>
-                <br>
-                <input type="text" name="sobrenome" id="sobrenome">
-            </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Procure Aqui...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
         </div>
-        <div class="row mt-5">
+        <div class="user">
+          <img src="../Imagens/user_img.png" alt="">
+        </div>
+      </div>
+        <div class="contents">
+          <div class="container mt-5">
+            <div class="title func">
+              <h1 class="adicionar-func">Adicionar novo funcionário</h1>
+              <p>Coloque as informações conforme o necessário.</p>
+            </div>
+            <div class="rows">
+              <div class="row1">
+                <div class="offset-3 col-3">
+                    <label for="nome">Nome</label>
+                    <br>
+                    <input type="text" name="nome" id="nome" placeholder="Ex. Beatriz, Frederico, Luiz Augusto, Luiz Carlos, Pedro, Sergio, Thainá">
+                </div>
+                <div class="col-6">
+                    <label for="sobrenome">Sobrenome</label>
+                    <br>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Ex. Hirasaki, Schur, Ferreira, Silva, Lucas, Lima">
+                </div>
+              </div>
+              <div class="row7">
             <div class="offset-3 col-9">
                 <label for="funcionario">Funcionário Yamaha?</label>
                 <div class="btn-group mt-3" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                     <label class="btn btn-outline-primary" for="btnradio1">Sim</label>
-                  
+                      
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio2">Não</label>
                   </div>
             </div>
-        </div>
-        <div class="row mt-5">
+          </div>
+          <div class="row1">
             <div class="offset-3 col-3">
                 <label for="registro" id="labelTipo1">Registro</label>
                 <br>
-                <input type="text" name="registro" id="tipo1">
+                <input type="text" name="registro" id="tipo1" placeholder="Ex. Y180522">
             </div>
-            <div class="col-6">
-                <label for="governanca" id="labelTipo2">Governança</label>
-                <br>
-                <select name="governanca" id="tipo2">
-                    <option value="selecione">Selecione</option>
-                    <option value="opcao1">Opção 1</option>
-                    <option value="opcao2">Opção 2</option>
-                    <option value="opcao3">Opção 3</option>
-                </select>
-            </div>
+          </div>
+          <div class="row1">
+            <label for="governanca" id="labelTipo2">Cidade</label>
+            <br>
+            <select name="governanca" id="tipo2">
+                <option value="selecione">Selecione</option>
+                <option value="opcao1">Manaus</option>
+                <option value="opcao2">São Paulo</option>
+                <option value="opcao3">Ambos</option>
+            </select>
         </div>
-        <div class="row mt-5">
+          <div class="row1">
             <div class="offset-3 col-3">
-                <label for="jornada-trabalho">Jornada trabalho mensal</label>
+                <label for="jornada-trabalho">Horas Disponíveis para Projetos</label>
                 <br>
-                <input type="number" name="jornada-trabalho" id="jornada-trabalho">
+                <input type="number" name="jornada-trabalho" id="jornada-trabalho" placeholder="Ex. 88">
             </div>
-            <div class="col-6">
-                <label for="cargo">Cargo</label>
-                <br>
-                <select name="cargo" id="cargo">
-                    <option value="selecione">Selecione</option>
-                    <option value="opcao1">Opção 1</option>
-                    <option value="opcao2">Opção 2</option>
-                    <option value="opcao3">Opção 3</option>
-                </select>
+          </div>
+          <div class="row1">
+              <label for="cargo">Cargo</label>
+              <br>
+              <select name="cargo" id="cargo">
+                  <option value="selecione">Selecione</option>
+                  <option value="opcao1">Analista de Sistemas</option>
+                  <option value="opcao2">Desenvolvedor Python</option>
+                  <option value="opcao3">Gerente de Projetos</option>
+              </select>
+          </div>
+          <div class="row5">
+            <div class="offset-4 col-8 mt-4">
+              <a href="home.html" class="butn">
+                <p>Adicionar novo funcionário</p>
+              </a>
             </div>
+          </div>
         </div>
-        <div class="row mt-5">
-            <div class="offset-3 col-3">
-                <button id="adicionar-func">Adicionar novo funcionário</button>
-            </div>
-        </div>
-            </div>
-        </div>
+      </div>
+    </div>
     </div>
 </body>
 </html>
