@@ -1,4 +1,4 @@
-+//PEDRO
+//PEDRO
 
 if (document.title === 'Cadastrar Funcionário')
 {
