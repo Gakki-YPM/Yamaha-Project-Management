@@ -16,12 +16,26 @@ a {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
+=======
+thead
+{
+    pointer-events: none;
+}
+
+/* body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+} */
+
+>>>>>>> Stashed changes
 .contents {
     display: flex;
 }
 
 /* THAINA */ 
-#novo-projeto{
+/* #novo-projeto{
     text-align: center;
     width: 100%;
 }
@@ -40,42 +54,128 @@ a {
 }
 #novo-projeto h1{
     text-align: center;
-    /* margin: 30px; */
     font-size: 50px;
 }
 #novo-projeto h2{
     text-align: center;
-    /* margin:50px; */
 }
 
 #adicionar-projeto{
     text-align: center;
-}
+} 
+
+*/
 /* SERGJAO */ 
 
 #header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+<<<<<<< Updated upstream
     align-content: center;
     background-color: #f2f2f2;
+=======
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    padding: 0 10px;
+    background: var(--cinza);
+    border-bottom: 1px solid;
+>>>>>>> Stashed changes
 }
 
 #usuario, #logo {
     display: flex;
     flex-direction: row;
     align-items: center;
+<<<<<<< Updated upstream
     justify-content: center;
     margin: 1em;
+=======
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.toggle .fa-solid
+{
+    font-size: 0.6em;
+}
+
+.search
+{
+    position: relative;
+    width: 400px;
+    margin: 0 10px ;
+}
+
+.search label
+{
+    position: relative;
+    width: 100%;
+}
+
+.search label input
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--preto);
+}
+
+.search label .fa-solid
+{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+.user
+{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main.active .topbar .user {
+    margin-right: 5em;
+    transition: 0.5s;
+>>>>>>> Stashed changes
 }
 
 #usuario p {
     margin-right: 1rem;
 }
 
+<<<<<<< Updated upstream
 #linhavermelha {
     padding: 0.4em;
     background-color: #E53420;
+=======
+.cardBox
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 5em;
+}
+
+.cardBox.exp
+{
+    grid-template-columns: repeat(1, 1fr) !important;
+>>>>>>> Stashed changes
 }
 
 #navbar {
@@ -87,13 +187,64 @@ a {
     height: 100vh;
     justify-content: space-evenly;
     align-items: center;
+<<<<<<< Updated upstream
+=======
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox.exp .card
+{
+    display: block;
+}
+
+.cardBox .card .icon8x 
+{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: var(--secundaria);
+}
+
+.cardBox .card .graphs .cardName
+{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--secundaria);
+}
+
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 10px;
+>>>>>>> Stashed changes
 }
 
 #navbar a {
     color: #fff;
 }
 
+<<<<<<< Updated upstream
 #juntano {
+=======
+.details .projectlist.mes table tr td:first-child
+{
+    text-align: start;
+}
+
+.details .projectlist.mes table tr td
+{
+    text-align: center;
+}
+
+.cardHeader
+{
+>>>>>>> Stashed changes
     display: flex;
 }
 
@@ -112,6 +263,7 @@ a {
     height: 150px;
 }
 
+<<<<<<< Updated upstream
 .info-extras h3{
     text-align: center;
 }
@@ -122,6 +274,314 @@ a {
 }
 
 .adicionar-func{
+=======
+.details .projectlist table tr td:nth-child(5),
+.details .projectlist table tr td:nth-child(3)
+{
+    text-align: center;
+}
+
+.details .projectlist.project table tr td:nth-child(3)
+{
+    text-align: start;
+}
+
+.details .projectlist table tr td:last-child
+{
+    text-align: end;
+}
+
+.status-complete
+{
+    padding: 2px 4px;
+    background: var(--secundaria);
+    color: var(--primaria);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status-pending
+{
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--primaria);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status-waiting
+{
+    padding: 2px 4px;
+    background: #f9ca3f;
+    color: var(--primaria);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status-paused
+{
+    padding: 2px 4px;
+    background: red;
+    color: var(--primaria);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.addnew
+{
+    margin-top: 7em;
+}
+
+.addnew h1
+{
+    margin-left: 1em;
+    text-align: center;
+    color: var(--secundaria);
+}
+
+.choices
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.choices a 
+{
+    color: var(--preto);
+}
+
+.choices .btn1,
+.choices .btn2
+{
+    padding: 4em 6em 4em 6em;
+    border-radius: 25px;
+    background: var(--cinza);
+    box-shadow: 35px 35px 0 10px var(--primaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.btn1 i,
+.btn2 i 
+{
+    font-size: 6em;
+}
+
+.btn1 p, 
+.btn2 p
+{
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.choices .btn1:hover,
+.choices .btn2:hover
+{
+    background: var(--secundaria);
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.choices .btn1:hover i,
+.choices .btn2:hover i,
+.choices .btn1:hover p,
+.choices .btn2:hover p
+{
+    color: var(--primaria);
+}
+
+
+.progress
+{
+    display: flex;
+}
+
+.progress-project
+{
+    width: 50%;
+    height: 10px;
+    background: var(--terciaria);
+    padding: 2em;
+}
+
+.progress-project.agendar
+{
+    width: 100%;
+    height: 10px;
+    background: var(--terciaria);
+    padding: 2em;
+    transition: 0.5s;
+}
+
+.progress-full.agendar
+{
+    width: 0%;
+    height: 10px;
+    background-color: var(--cinza);
+    padding: 2em;
+}
+
+.contents 
+{
+    margin-top: 2em;
+}
+
+.contents .container.mt-5 .title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--secundaria);   
+}
+
+.contents .container.mt-5 .title.func
+{
+    margin-top: 40px;
+}
+
+.contents .container.mt-5 .title h1
+{
+    margin-right: 7.5em; 
+}
+
+.contents .container.mt-5 .title.func h1
+{
+    margin-left: 8.5em;
+}
+
+.contents .container.mt-5 .title #agendar-projeto
+{
+    margin-right: 4.9em;
+}
+
+.container.mt-5 .rows
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2em;
+    margin-left: 17em;
+}
+
+.container.mt-5 .rows .row1,
+.container.mt-5 .rows .row2,
+.container.mt-5 .rows .row3,
+.container.mt-5 .rows .row4
+{
+    margin-bottom: 1.5em;
+}
+
+.container.mt-5 .rows .row1 input,
+.container.mt-5 .rows .row3 input,
+.container.mt-5 .rows .row4 input
+{
+    width: 40em;
+    height: 2em;
+}
+
+.container.mt-5 .rows .row2 textarea
+{
+    width: 40em;
+}
+
+.container.mt-5 .rows .row1 p,
+.container.mt-5 .rows .row2 p,
+.container.mt-5 .rows .row3 p,
+.container.mt-5 .rows .row4 p
+{
+    text-align: start;
+    margin: 0 0 5px 15px;
+    font-weight: bold;
+    color: var(--secundaria);
+}
+
+.container.mt-5 .rows .row5 
+{
+    align-self: flex-end;
+    margin-right: 25px;
+}
+
+.container.mt-5 .rows .row5 a
+{
+    color: var(--primaria);
+}
+
+.container.mt-5 .rows .row5 .butn p
+{
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 25px;
+    background: var(--secundaria);
+    margin-bottom: 5px;
+}
+
+.container.mt-5 .rows .row5 .butn .projeto
+{
+    justify-content: center;
+}
+
+.ignore
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ignore p 
+{
+    margin: 10 !important;
+}
+
+.ignore input
+{
+    width: 1em !important;
+}
+
+.next
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.next a
+{
+    color: var(--primaria);
+    padding: 15px;
+    background: var(--secundaria);
+    border-radius: 25px;
+}
+
+.rows .row7 .offset-3.col-9 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.rows .row7 .offset-3.col-9 label{
+    margin-right: 20px;
+}
+
+.rows .row7 .offset-3.col-9 .btn-group.mt-3 label
+{
+    margin-right: 20px;
+}
+
+/* FIM SERJO */ 
+
+/* PEDRO */
+/* #adicionar-func{
+>>>>>>> Stashed changes
     border-style: none;
     color: white;
     background-color: #0A0A6A;
@@ -152,7 +612,7 @@ select{
 
 .btn-group{
     margin-left: 10px;
-}
+} */
 
 
 /* GUTO */
