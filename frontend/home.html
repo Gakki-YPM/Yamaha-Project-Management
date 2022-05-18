@@ -30,11 +30,11 @@
           </a>
         </li>
         <li>
-          <a href="novo_projeto.html">
+          <a href="novo.html">
             <span class="icon">
-              <i class="fa-solid fa-file-circle-plus fa-lg"></i>
+              <i class="fa-solid fa-circle-plus fa-lg"></i>
             </span>
-            <span class="title">Novo Projeto</span>
+            <span class="title">Adicionar Novo...</span>
           </a>
         </li>
         <li>
@@ -56,9 +56,9 @@
         <li>
           <a href="tabela_funcionarios.html">
             <span class="icon">
-              <i class="fa-solid fa-users fa-lg"></i>
+              <i class="fa-solid fa-table-columns fa-lg"></i>
             </span>
-            <span class="title">Funcionários</span>
+            <span class="title">Tabelas</span>
           </a>
         </li>
       </ul>
@@ -73,6 +73,7 @@
             <input type="text" placeholder="Procure Aqui...">
             <i class="fa-solid fa-magnifying-glass"></i>
           </label>
+
         </div>
         <div class="user">
           <img src="../Imagens/user_img.png" alt="">
@@ -80,7 +81,7 @@
       </div>
       <div class="cardBox">
         <div class="card">
-          <div>
+          <a href="graficos.html">
             <div class="icon8x">
               <i class="fa-solid fa-clock"></i>
             </div>
@@ -88,10 +89,10 @@
               <canvas id="barGrafico"></canvas>
               <div class="cardName">Horas Trabalhadas</div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="card">
-          <div>
+          <a href="">
             <div class="icon8x">
               <i class="fa-solid fa-paste"></i>
             </div>
@@ -99,10 +100,10 @@
               <canvas id="lineGrafico"></canvas>
               <div class="cardName">Quantidade de Projetos</div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="card">
-          <div>
+          <a href="">
             <div class="icon8x">
               <i class="fa-solid fa-people-group"></i>
             </div>
@@ -110,10 +111,10 @@
               <canvas id="pieGrafico"></canvas>
               <div class="cardName">Disponibilidade de Funções</div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="card">
-          <div>
+          <a href="">
             <div class="icon8x">
               <i class="fa-solid fa-people-carry-box"></i>
             </div>
@@ -121,14 +122,14 @@
               <canvas id="polarGrafico"></canvas>
               <div class="cardName">Workload dos Funcionários</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="details">
         <div class="projectlist">
           <div class="cardHeader">
             <h2>
-              Lista de Projetos
+              Acompanhamento de Projetos
             </h2>
             <a href="#" class="btn">Ver Todos</a>
           </div>
@@ -137,8 +138,8 @@
               <tr>
                 <td>Código</td>
                 <td>Título</td>
-                <td>Área</td>
-                <td>Responsável</td>
+                <td>Quantidade de Alocados</td>
+                <td>Data de Entrega</td>
                 <td>Governança</td>
                 <td>Status</td>
               </tr>
@@ -147,18 +148,18 @@
               <tr>
                 <td>PY01</td>
                 <td>Implantação de um sistema ERP</td>
-                <td>Tecnologia da Informação</td>
-                <td>Luiz Carlos</td>
+                <td>25</td>
+                <td>18/05/2022</td>
                 <td>SP</td>
                 <td>
-                  <span class="status-pending">Em Progresso</span>
+                  <span class="status-pending">Andamento</span>
                 </td>
               </tr>
               <tr>
                 <td>PY02</td>
                 <td>Desenvolvimento de um novo produto</td>
-                <td>Produção</td>
-                <td>Beatriz Hirasaki</td>
+                <td>29</td>
+                <td>30/09/2022</td>
                 <td>AM</td>
                 <td>
                   <span class="status-paused">Em Pausa</span>
@@ -167,18 +168,18 @@
               <tr>
                 <td>PY03</td>
                 <td>Abertura de uma nova filial comercial</td>
-                <td>Negócios</td>
-                <td>Frederico Schur</td>
+                <td>13</td>
+                <td>22/02/2025</td>
                 <td>SP</td>
                 <td>
-                  <span class="status-waiting">Em Avaliação</span>
+                  <span class="status-waiting">Análise</span>
                 </td>
               </tr>
               <tr>
                 <td>PY04</td>
-                <td>Renovação da linha de produção</td>
-                <td>Produção</td>
-                <td>Thainá de Deus</td>
+                <td>Renovação da linha de Produção</td>
+                <td>29</td>
+                <td>09/09/2029</td>
                 <td>AM</td>
                 <td>
                   <span class="status-complete">Completo</span>
@@ -187,8 +188,8 @@
               <tr>
                 <td>PY05</td>
                 <td>Aumento da remuneração</td>
-                <td>Recursos Humanos</td>
-                <td>Pedro Silva</td>
+                <td>82</td>
+                <td>02/04/2026</td>
                 <td>SP</td>
                 <td>
                   <span class="status-paused">Em Pausa</span>
@@ -197,28 +198,28 @@
               <tr>
                 <td>PY06</td>
                 <td>Aquisição de um concorrente</td>
-                <td>Negócios</td>
-                <td>Sergio Lucas</td>
+                <td>13</td>
+                <td>03/05/2027</td>
                 <td>SP</td>
                 <td>
-                  <span class="status-waiting">Em Avaliação</span>
+                  <span class="status-waiting">Análise</span>
                 </td>
               </tr>
               <tr>
                 <td>PY07</td>
                 <td>Certificação ISO de qualidade dos fornecedores</td>
-                <td>Produção</td>
-                <td>Luiz Carlos</td>
+                <td>29</td>
+                <td>18/05/2022</td>
                 <td>AM</td>
                 <td>
-                  <span class="status-pending">Em Progresso</span>
+                  <span class="status-pending">Andamento</span>
                 </td>
               </tr>
               <tr>
                 <td>PY08</td>
                 <td>Implantação do SAC</td>
-                <td>Marketing</td>
-                <td>Beatriz Hirasaki</td>
+                <td>24</td>
+                <td>30/09/2022</td>
                 <td>SP</td>
                 <td>
                   <span class="status-paused">Em Pausa</span>
@@ -227,25 +228,26 @@
               <tr>
                 <td>PY09</td>
                 <td>Renovação do parque de hardware</td>
-                <td>Tecnologia da Informação</td>
-                <td>Frederico Schur</td>
+                <td>25</td>
+                <td>22/02/2025</td>
                 <td>SP</td>
                 <td>
-                  <span class="status-waiting">Em Avaliação</span>
+                  <span class="status-waiting">Análise</span>
                 </td>
               </tr>
               <tr>
                 <td>PY10</td>
                 <td>Implantação de assistência médica para os funcionários</td>
-                <td>Recursos Humanos</td>
-                <td>Pedro Silva</td>
+                <td>82</td>
+                <td>02/04/2026</td>
                 <td>AM</td>
                 <td>
-                  <span class="status-pending">Em Progresso</span>
+                  <span class="status-pending">Andamento</span>
                 </td>
               </tr>
             </tbody>
           </table>
+
         </div>
       </div>
     </div>
