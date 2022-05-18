@@ -1,4 +1,4 @@
-//PEDRO
++//PEDRO
 
 if (document.title === 'Cadastrar Funcionário')
 {
@@ -62,4 +62,21 @@ if (document.title === 'Cadastrar Funcionário')
     toggle.onclick = function(){
         navbar.classList.toggle('active');
         main.classList.toggle('active');
+    }
+
+    // Desabilitar a Data
+
+    function disable() {
+        if (document.getElementById('ignorainicial').checked == true) {
+            document.getElementById('inicial').disabled = true
+        }
+        else {
+            document.getElementById('inicial').disabled = false
+        }
+        if (document.getElementById('ignorafinal').checked == true) {
+            document.getElementById('final').disabled = true
+        }
+        else {
+            document.getElementById('final').disabled = false
+        }
     }
