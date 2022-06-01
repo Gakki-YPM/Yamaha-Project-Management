@@ -18,10 +18,12 @@ if (document.title === 'Cadastrar Funcionário')
             tipoPosicao2.setAttribute('name', 'governanca');
 
             tipo1.innerHTML = 'Registro';
-            tipo2.innerHTML = 'Área';
+            tipo2.innerHTML = 'Governança';
 
             console.log(tipoPosicao1);
             console.log(tipoPosicao2);
+
+            botaoNao.checked = false;
         }
     });
 
@@ -36,6 +38,8 @@ if (document.title === 'Cadastrar Funcionário')
 
             console.log(tipoPosicao1);
             console.log(tipoPosicao2);
+
+            botaoSim.checked = false;
         }
     });
 }

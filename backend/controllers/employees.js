@@ -32,16 +32,18 @@ const getEmployeeById = (req, res) =>{
 }
 
 const createEmployee = (req, res) =>{
-    const firstName = req.body.Nome;
-    const lastName = req.body.Sobrenome;
-    const employeeYamaha = req.body.FuncionarioYamaha;
-    const register = req.body.Registro;
-    const city = req.body.Cidade;
-    const hoursProject = req.body.HorasProjetos;
-    const position = req.body.Cargo;
+    const firstName = req.body.nome;
+    const lastName = req.body.sobrenome;
+    const employeeYamaha = req.body.funcionarioYamaha;
+    const register = req.body.registro;
+    const governance = req.body.governanca;
+    const company = req.body.empresa;
+    const durationContract = req.body.duracaocontrato;
+    const hoursProject = req.body.horasdisponiveis;
+    const position = req.body.cargo;
 
-    const sql = 'INSERT INTO Funcionarios (Nome, Sobrenome, FuncionarioYamaha, Registro, Cidade, HorasProjetos, Cargo) VALUES (?, ?, ?, ?, ?, ?, ?)';
-    db.run(sql, [firstName, lastName, employeeYamaha, register, city, hoursProject, position], (err) =>{
+    const sql = 'INSERT INTO Funcionarios (Nome, Sobrenome, FuncionarioYamaha, Registro, Governanca, Empresa, DuracaoContrato, HorasProjetos, Cargo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    db.run(sql, [firstName, lastName, employeeYamaha, register, governance, company, durationContract, hoursProject, position], (err) =>{
         if(err){
             throw err;
         } else {
