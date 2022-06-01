@@ -80,3 +80,11 @@ if (document.title === 'Cadastrar Funcionário')
             document.getElementById('final').disabled = false
         }
     }
+
+    // Confirmar Inscrição 
+
+    function confirmation() {
+        if (document.title === 'Cadastrar Função | Yamaha Project Viewer') {
+            alert('Função Cadastrada com Sucesso!' + '/nRedirecionando a página principal...')
+        } 
+    }
