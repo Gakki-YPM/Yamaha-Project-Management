@@ -3,25 +3,24 @@ let barGrafico = document.getElementById('barGrafico');
 const config = {
     type: 'bar',
     data: { labels: [
-        'Janeiro',
-        'Fevereiro',
-        'Março',
-        'Abril',
-        'Maio',
-        'Junho',
-        'Julho',
-        'Agosto',
-        'Setembro',
-        'Outubro',
-        'Novembro',
-        'Dezembro'
+        'Projeto 1',
+        'Projeto 2',
+        'Projeto 3',
+        'Projeto 4',
+        'Projeto 5',
+        'Projeto 6',
+        'Projeto 7',
+        'Projeto 8',
+        'Projeto 9',
+        'Projeto 10',
+        'Projeto 11',
+        'Projeto 12'
     ], 
-    datasets: [{label: 'Número de horas trabalhadas', data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120],
+    datasets: [{label: 'Horas de cada Projeto', data: [300, 500, 300, 400, 500, 550, 450, 500, 500, 550, 300, 550],
     backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(128, 0, 128)'
+        ' #247BA0',
+        ' #0A2463',
+        ' #605F5E'
       ],
     }],
     }
@@ -34,17 +33,19 @@ let myGraph = new Chart(barGrafico, config);
 let pieGrafico = document.getElementById('pieGrafico');
 const dataPie = {
     labels: [
-      'Programadores',
-      'Analistas',
-      'Gerentes'
+      'Programadores JavaScript',
+      'Gerentes',
+      'Analistas de sistema',
+      'Programadores Pyton'
     ],
     datasets: [{
-      label: 'Funcionários disponíveis',
-      data: [500, 50, 100],
+      label: 'Disponibilidade Horas/Funções',
+      data: [500, 50, 100, 100],
       backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
+        ' #247BA0',
+        ' #605F5E',
+        ' #e53420',
+        ' #0A2463'
       ],
       hoverOffset: 4
     }]
@@ -60,55 +61,71 @@ let myPieGrafico = new Chart(pieGrafico, configPie);
 // Gráfico pie
 
 
-// Gráfico line
+let mixedGrafico = document.getElementById('mixedGrafico');
+const confige = {
+    type: 'bar',
+    data: { labels: [
+        'Janeiro',
+        'Feverreiro',
+        'Marco',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho ',
+        'Agosto',
+        'Setembro',
+        'Outubro',
+        'Novembro',
+        'Dezembro'
+    ], 
+    datasets: [{label: 'Horas/Projeto', data: [900, 500, 800, 800, 900, 700, 900, 550, 600, 900, 600, 800],
+    backgroundColor: [
+        ' #0A2463',
+        ' #247BA0',
+        ' #605F5E',
+      ],
+    order: 2
+    }, {  
+      label: 'Limite de horas',
+           data: [600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600],
+           type: 'line',
+           borderColor: '#FB3640',
+           order: 1
+    }
+  ],
+    }
+}
+
+let myGrapho = new Chart(mixedGrafico, confige);
+
+
+
+
 let lineGrafico = document.getElementById('lineGrafico');
 
-const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
-const dataLine = {
+const labels = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+];
+const data = {
   labels: labels,
   datasets: [{
-    label: 'Quantidade de projetos',
-    data: [65, 59, 80, 81, 56, 55, 40],
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)',
-    tension: 0.1
+    label: 'Grafico Area',
+    fill: true,
+    backgroundColor: ' #247BA0',
+    borderColor: ' #0A2463',
+    data: [10, 35, 32, 35, 30, 37, 45],
   }]
 };
 
-const configLine = {
-    type: 'line',
-    data: dataLine,
+const configg = {
+  type: 'line',
+  data: data,
+  options: {}
 };
 
-let myLineGrafico = new Chart(lineGrafico, configLine);
-// Gráfico line
-
-// Gráfico Polar
-
-let polarGrafico = document.getElementById('polarGrafico'); 
-
-const dataPolar = {
-  labels: [
-    'Sobrecarregado',
-    'Abaixo do Carga',
-    'Quase no Limite',
-    'Carga completa'
-  ],
-  datasets: [{
-    label: 'My First Dataset',
-    data: [11, 16, 7, 3],
-    backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(75, 192, 192)',
-      'rgb(255, 205, 86)',
-      'rgb(54, 162, 235)'
-    ]
-  }]
-};
-
-const configPolar = {
-  type: 'polarArea',
-  data: dataPolar,
-};
-
-let myPolarGrafico = new Chart(polarGrafico, configPolar);
+let myGraphy = new Chart(lineGrafico, configg);
