@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const getAllEmployees = (req, res) =>{
-    const sql = 'SELECT * FROM Funcionarios';
+    const sql = 'SELECT * FROM Funcionario';
     db.all(sql, [], (err, rows) =>{
         if(err){
             throw err;
@@ -21,7 +21,7 @@ const getAllEmployees = (req, res) =>{
 
 const getEmployeeById = (req, res) =>{
     const { id } = req.params;
-    const sql = `SELECT * FROM Funcionarios WHERE FuncionarioID = ${id}`;
+    const sql = `SELECT * FROM Funcionario WHERE FuncionarioID = ${id}`;
     db.get(sql, [], (err, row) =>{
         if(err){
             throw err;
@@ -32,18 +32,16 @@ const getEmployeeById = (req, res) =>{
 }
 
 const createEmployee = (req, res) =>{
-    const firstName = req.body.nome;
-    const lastName = req.body.sobrenome;
-    const employeeYamaha = req.body.funcionarioYamaha;
-    const register = req.body.registro;
-    const governance = req.body.governanca;
-    const company = req.body.empresa;
-    const durationContract = req.body.duracaocontrato;
-    const hoursProject = req.body.horasdisponiveis;
-    const position = req.body.cargo;
+    const firstName = req.body.Nome;
+    const lastName = req.body.Sobrenome;
+    const employeeYamaha = req.body.FuncionarioYamaha;
+    const register = req.body.Registro;
+    const company = req.body.Empresa; // criar e deixar aceitar null
+    const durationContract = req.body.Duracaocontrato;//mesma coisa que o de cima. temos que ver
+    const hoursProject = req.body.Horasdisponiveis;
 
-    const sql = 'INSERT INTO Funcionarios (Nome, Sobrenome, FuncionarioYamaha, Registro, Governanca, Empresa, DuracaoContrato, HorasProjetos, Cargo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    db.run(sql, [firstName, lastName, employeeYamaha, register, governance, company, durationContract, hoursProject, position], (err) =>{
+    const sql = 'INSERT INTO Funcionario (Nome, Sobrenome, FuncionarioYamaha, Registro, Funcao, Empresa, DuracaoContrato, HorasProjetos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    db.run(sql, [firstName, lastName, employeeYamaha, register, company, durationContract, hoursProject], (err) =>{
         if(err){
             throw err;
         } else {
@@ -63,7 +61,7 @@ const updateEmployee = (req, res) =>{
     const hoursProject = req.body.HorasProjetos;
     const position = req.body.Cargo;
 
-    const sql = `UPDATE Funcionarios SET Nome = ?, Sobrenome = ?, FuncionarioYamaha = ?, Registro = ?, Cidade = ?, HorasProjetos = ?, Cargo = ? WHERE FuncionarioID = ${id}`;
+    const sql = `UPDATE Funcionario SET Nome = ?, Sobrenome = ?, FuncionarioYamaha = ?, Registro = ?, Cidade = ?, HorasProjetos = ?, Cargo = ? WHERE FuncionarioID = ${id}`;
     db.run(sql, [firstName, lastName, employeeYamaha, register, city, hoursProject, position], (err) =>{
         if(err){
             throw err;
@@ -76,7 +74,7 @@ const updateEmployee = (req, res) =>{
 const deleteEmployee = (req, res) =>{
     const { id } = req.params;
 
-    const sql = `DELETE FROM Funcionarios WHERE FuncionarioID = ${id}`;
+    const sql = `DELETE FROM Funcionario WHERE FuncionarioID = ${id}`;
     db.run(sql, [], (err) =>{
         if(err){
             throw err;

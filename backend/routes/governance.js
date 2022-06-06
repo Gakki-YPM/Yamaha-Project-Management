@@ -5,5 +5,12 @@ const router = express.Router();
 
 router.get('/', governanceController.getAllGovernance);
 
-module.exports = router;
+router.get('/:id', governanceController.getGovernanceById);
 
+router.post('/', governanceController.createGovernance);
+
+router.patch('/:id', governanceController.updateGovernance);
+
+router.delete('/:id', governanceController.deleteGovernance);
+
+module.exports = router;
