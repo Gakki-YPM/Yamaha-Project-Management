@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const getAllProjects = (req, res) =>{
-    const sql = 'SELECT * FROM Projetos';
+    const sql = 'SELECT * FROM Projeto';
     db.all(sql, [], (err, rows) =>{
         if(err){
             throw err;
@@ -21,7 +21,7 @@ const getAllProjects = (req, res) =>{
 
 const getProjectById = (req, res) =>{
     const { id } = req.params;
-    const sql = `SELECT * FROM Projetos WHERE ProjetoID = ${id}`;
+    const sql = `SELECT * FROM Projeto WHERE ProjetoID = ${id}`;
     db.get(sql, [], (err, row) =>{
         if(err){
             throw err;
@@ -39,7 +39,7 @@ const createProject = (req, res) =>{
     const beginDate = req.body.DataInicial;
     const finalDate = req.body.DataFinal;
 
-    const sql = `INSERT INTO Projetos (Nome, Descricao, Cidade, PrincipalResponsavel, DataInicial, DataFinal) VALUES (?, ?, ?, ?, ?, ?)`;
+    const sql = `INSERT INTO Projeto (Nome, Descricao, Cidade, PrincipalResponsavel, DataInicial, DataFinal) VALUES (?, ?, ?, ?, ?, ?)`;
 
     db.run(sql, [name, description, city, principalResponsible, beginDate, finalDate], (err) =>{
         if(err){
@@ -60,7 +60,7 @@ const updateProject = (req, res) =>{
     const beginDate = req.body.DataInicial;
     const finalDate = req.body.DataFinal;
 
-    const sql = `UPDATE Projetos SET Nome = ?, Descricao = ?, Cidade = ?, PrincipalResponsavel = ?, DataInicial = ?, DataFinal = ? WHERE ProjetoID = ${id}`;
+    const sql = `UPDATE Projeto SET Nome = ?, Descricao = ?, Cidade = ?, PrincipalResponsavel = ?, DataInicial = ?, DataFinal = ? WHERE ProjetoID = ${id}`;
 
     db.run(sql, [name, description, city, principalResponsible, beginDate, finalDate], (err) =>{
         if(err){
@@ -73,7 +73,7 @@ const updateProject = (req, res) =>{
 
 const deleteProject = (req, res) =>{
     const { id } = req.params;
-    const sql = `DELETE FROM Projetos WHERE ProjetoID = ${id}`;
+    const sql = `DELETE FROM Projeto WHERE ProjetoID = ${id}`;
     db.run(sql, [], (err) =>{
         if(err){
             throw err;
