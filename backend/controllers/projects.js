@@ -34,14 +34,13 @@ const getProjectById = (req, res) =>{
 const createProject = (req, res) =>{
     const name = req.body.Nome;
     const description = req.body.Descricao;
-    const city = req.body.Cidade;
     const principalResponsible = req.body.PrincipalResponsavel;
     const beginDate = req.body.DataInicial;
     const finalDate = req.body.DataFinal;
 
-    const sql = `INSERT INTO Projeto (Nome, Descricao, Cidade, PrincipalResponsavel, DataInicial, DataFinal) VALUES (?, ?, ?, ?, ?, ?)`;
+    const sql = `INSERT INTO Projeto (Nome, Descricao, PrincipalResponsavel, DataInicial, DataFinal) VALUES (?, ?, ?, ?, ?)`;
 
-    db.run(sql, [name, description, city, principalResponsible, beginDate, finalDate], (err) =>{
+    db.run(sql, [name, description, principalResponsible, beginDate, finalDate], (err) =>{
         if(err){
             throw err;
         } else {
@@ -60,7 +59,7 @@ const updateProject = (req, res) =>{
     const beginDate = req.body.DataInicial;
     const finalDate = req.body.DataFinal;
 
-    const sql = `UPDATE Projeto SET Nome = ?, Descricao = ?, Cidade = ?, PrincipalResponsavel = ?, DataInicial = ?, DataFinal = ? WHERE ProjetoID = ${id}`;
+    const sql = `UPDATE Projeto SET Nome = ?, Descricao = ?, PrincipalResponsavel = ?, DataInicial = ?, DataFinal = ? WHERE ProjetoID = ${id}`;
 
     db.run(sql, [name, description, city, principalResponsible, beginDate, finalDate], (err) =>{
         if(err){

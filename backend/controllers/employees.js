@@ -36,12 +36,12 @@ const createEmployee = (req, res) =>{
     const lastName = req.body.Sobrenome;
     const employeeYamaha = req.body.FuncionarioYamaha;
     const register = req.body.Registro;
-    const company = req.body.Empresa; // criar e deixar aceitar null
-    const durationContract = req.body.Duracaocontrato;//mesma coisa que o de cima. temos que ver
-    const hoursProject = req.body.Horasdisponiveis;
+    const hoursProject = req.body.HorasProjetos;
+    const governnaceID = req.body.GovernnacaID;
+    const functionID = req.body.FuncaoID;
 
-    const sql = 'INSERT INTO Funcionario (Nome, Sobrenome, FuncionarioYamaha, Registro, Funcao, Empresa, DuracaoContrato, HorasProjetos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    db.run(sql, [firstName, lastName, employeeYamaha, register, company, durationContract, hoursProject], (err) =>{
+    const sql = 'INSERT INTO Funcionario (Nome, Sobrenome, FuncionarioYamaha, Registro, HorasProjetos, GovernancaID, FuncaoID) VALUES (?, ?, ?, ?, ?, ?, ?)';
+    db.run(sql, [firstName, lastName, employeeYamaha, register, hoursProject, governnaceID, functionID], (err) =>{
         if(err){
             throw err;
         } else {
@@ -57,12 +57,14 @@ const updateEmployee = (req, res) =>{
     const lastName = req.body.Sobrenome;
     const employeeYamaha = req.body.FuncionarioYamaha;
     const register = req.body.Registro;
-    const city = req.body.Cidade;
     const hoursProject = req.body.HorasProjetos;
-    const position = req.body.Cargo;
+    const position = req.body.Funcao;
+    const employeesID = req.body.FuncionarioID;
+    const governnaceID = req.body.GovernnacaID;
+    const functionID = req.body.FuncaoID;
 
-    const sql = `UPDATE Funcionario SET Nome = ?, Sobrenome = ?, FuncionarioYamaha = ?, Registro = ?, Cidade = ?, HorasProjetos = ?, Cargo = ? WHERE FuncionarioID = ${id}`;
-    db.run(sql, [firstName, lastName, employeeYamaha, register, city, hoursProject, position], (err) =>{
+    const sql = `UPDATE Funcionario SET Nome = ?, Sobrenome = ?, FuncionarioYamaha = ?, Registro = ?, HorasProjetos = ?, FuncionarioID = ?, GovernancaID = ?, FuncaoID = ?, WHERE FuncionarioID = ${id}`;
+    db.run(sql, [firstName, lastName, employeeYamaha, register, hoursProject, position, employeesID, governnaceID, functionID], (err) =>{
         if(err){
             throw err;
         } else {
