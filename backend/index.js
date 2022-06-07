@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
@@ -10,11 +11,9 @@ const governanceRoutes = require('./routes/governance');
 const roleRoutes = require('./routes/role');
 
 app.use(express.static('../frontend'));
-//app.use(express.static('../Imagens'));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(cors());
 
 app.use('/projects', projectsRoutes);
 app.use('/employees', employeesRoutes);
