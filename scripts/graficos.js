@@ -3,27 +3,45 @@ let barGrafico = document.getElementById('barGrafico');
 const config = {
     type: 'bar',
     data: { labels: [
-        'Projeto 1',
-        'Projeto 2',
-        'Projeto 3',
-        'Projeto 4',
-        'Projeto 5',
-        'Projeto 6',
-        'Projeto 7',
-        'Projeto 8',
-        'Projeto 9',
-        'Projeto 10',
-        'Projeto 11',
-        'Projeto 12'
+      'Janeiro',
+      'Feverreiro',
+      'Marco',
+      'Abril',
+      'Maio',
+      'Junho',
+      'Julho ',
+      'Agosto',
+      'Setembro',
+      'Outubro',
+      'Novembro',
+      'Dezembro'
     ], 
-    datasets: [{label: 'Horas de cada Projeto', data: [300, 500, 300, 400, 500, 550, 450, 500, 500, 550, 300, 550],
+    datasets: [{label: 'humanResources', data: [5400, 6900, 7200, 7100, 5600, 6010, 5000, 6000, 5600, 5000, 5750, 5590],
     backgroundColor: [
-        ' #247BA0',
-        ' #0A2463',
-        ' #605F5E'
-      ],
-    }],
-    }
+      ' #247BA0',
+    ],
+  order: 2
+  }, {  
+    label: 'Workload Needed',
+         data: [6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500],
+         type: 'line',
+         borderColor: '	#cccc00',
+  order: 1
+  }, {  
+    label: 'IT Limitation Internal and third parties',
+         data: [5500, 5500, 5500, 5500, 5500, 5500, 5500, 5500, 5500, 5500, 5500, 5500],
+         type: 'line',
+         borderColor: '#FB3640',
+  order: 1
+  }, {  
+    label: 'IT Limitation only with internal resources',
+         data: [2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500],
+         type: 'line',
+         borderColor: '#FB3640',
+         order: 1
+  }
+],
+  }
 }
 
 let myGraph = new Chart(barGrafico, config);
@@ -65,32 +83,23 @@ let mixedGrafico = document.getElementById('mixedGrafico');
 const confige = {
     type: 'bar',
     data: { labels: [
-        'Janeiro',
-        'Feverreiro',
-        'Marco',
-        'Abril',
-        'Maio',
-        'Junho',
-        'Julho ',
-        'Agosto',
-        'Setembro',
-        'Outubro',
-        'Novembro',
-        'Dezembro'
+        'Projeto 1',
+        'Projeto 2',
+        'Projeto 3',
+        'Projeto 4',
+        'Projeto 5',
+        'Projeto 6',
+        'Projeto 7',
+        'Projeto 8',
+        'Projeto 9',
+        'Projeto 10',
+        'Projeto 11',
+        'Projeto 12'
     ], 
-    datasets: [{label: 'Horas/Projeto', data: [900, 500, 800, 800, 900, 700, 900, 550, 600, 900, 600, 800],
+    datasets: [{label: 'Horas/Projetos', data: [5400, 6900, 7200, 7100, 5500, 6000, 5000, 6000, 4500, 5000, 7000, 6000],
     backgroundColor: [
-        ' #0A2463',
         ' #247BA0',
-        ' #605F5E',
       ],
-    order: 2
-    }, {  
-      label: 'Limite de horas',
-           data: [600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600],
-           type: 'line',
-           borderColor: '#FB3640',
-           order: 1
     }
   ],
     }
