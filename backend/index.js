@@ -21,5 +21,5 @@ app.use('/governance', governanceRoutes);
 app.use('/role', roleRoutes);
 
 app.listen(PORT, () =>{
-    console.log(`Server is running on port localhost:${PORT}`);
+    console.log(`Server is running on port 127.0.0.1:${PORT}`);
 });

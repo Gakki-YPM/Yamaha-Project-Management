@@ -129,15 +129,36 @@
                     <input type="text" name="responsavel" id="responsavel" placeholder="Ex. Bianca Sakihira">
                     </div>
             </div>
-            <div class="row5">
-                  <div class="offset-4 col-8 mt-4">
-                    <a href="agendar_projeto.html" class="butn">
-                      <p>Próxima Etapa</p>
-                    </a>
-                  </div>
-            </div>
+              <!--Linha que contém o input nome-->
+              <div class="row1">
+                <div class="offset-4 col-8">
+                    <p>Data Inicial</p>
+                    <input type="date" id="inicial">
+                    <div class="ignore">
+                        <input type="checkbox" name="ignorainicial" id="ignorainicial" onclick="disable()">
+                        <p>Não tem</p>
+                    </div>
+                </div>    
+              </div>
+            <!--Fim da linha que contém o input nome-->
+              <!--Linha que contém o input nome-->
+              <div class="row3">
+                <div class="offset-4 col-8">
+                    <p>Data Final</p>
+                    <input type="date" id="final">
+                    <div class="ignore">
+                        <input type="checkbox" name="ignorafinal" id="ignorafinal" onclick="disable()">
+                        <p>Não tem</p>
+                    </div>
+                </div>    
+              </div>
               <!--Linha que contém o botão adicionar novo funcionário-->
           </div>
+          <div class="next">
+            <a href="home.html">
+                Concluir
+            </a>
+        </div>
         </div>
             <!--Fim do container que agrupa os elementos do formulário da página-->
       </div>
