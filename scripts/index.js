@@ -96,7 +96,6 @@ todos.forEach(
 
 function dragStart(){
     draggableTodo = this; 
-    console.log('Drag Start');
     setTimeout(() => {
         this.style.display = 'none'; 
     }, 0);
@@ -104,7 +103,6 @@ function dragStart(){
 
 function dragEnd(){
     draggableTodo = null; 
-    console.log('Drag End');
     setTimeout(() => {
         this.style.display = 'block'; 
     }, 0);
@@ -119,23 +117,19 @@ all_status.forEach(status => {
 
 function dragOver(e){
     e.preventDefault(); 
-    console.log('Drag Over');
 }
 
 function dragEnter(){
     this.style.border = '1px dashed #ccc';
-    console.log('Drag Enter');
 }
 
 function dragLeave(){
     this.style.border = 'none';
-    console.log('Drag Leave');
 }
 
 function dragDrop(){
     this.style.border = 'none';
     this.appendChild(draggableTodo);
-    console.log('Drag Drop');
 }
 
 // Modal 
