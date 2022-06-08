@@ -2,6 +2,11 @@
 let barGrafico = document.getElementById('barGrafico');
 const config = {
     type: 'bar',
+    options: {
+      plugins: {
+          legend: {
+              display: false,
+           } } } ,
     data: { labels: [
       'Janeiro',
       'Feverreiro',
@@ -38,10 +43,11 @@ const config = {
          data: [2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500],
          type: 'line',
          borderColor: '#FB3640',
-         order: 1
+         order: 1,
+         
   }
 ],
-  }
+  },
 }
 
 let myGraph = new Chart(barGrafico, config);
@@ -51,14 +57,15 @@ let myGraph = new Chart(barGrafico, config);
 let pieGrafico = document.getElementById('pieGrafico');
 const dataPie = {
     labels: [
-      'Programadores JavaScript',
-      'Gerentes',
-      'Analistas de sistema',
-      'Programadores Pyton'
+      'Projeto 1',
+      'Projeto 2',
+      'Projeto 3',
+      'Projeto 4',
+      'Projeto 5'
     ],
     datasets: [{
       label: 'Disponibilidade Horas/Funções',
-      data: [500, 50, 100, 100],
+      data: [500, 50, 100, 100, 100],
       backgroundColor: [
         ' #247BA0',
         ' #605F5E',
