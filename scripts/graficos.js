@@ -30,7 +30,7 @@ const config = {
     label: 'Workload Needed',
          data: [6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500],
          type: 'line',
-         borderColor: '	#cccc00',
+         borderColor: '	#605F5E',
   order: 1
   }, {  
     label: 'IT Limitation Internal and third parties',
@@ -65,7 +65,7 @@ const dataPie = {
     ],
     datasets: [{
       label: 'Disponibilidade Horas/Funções',
-      data: [500, 50, 100, 100, 100],
+      data: [250, 50, 100, 100, 100],
       backgroundColor: [
         ' #247BA0',
         ' #605F5E',
@@ -130,7 +130,7 @@ const labels = [
 const data = {
   labels: labels,
   datasets: [{
-    label: 'Grafico Area',
+    label: 'Quantidades de Projetos',
     fill: true,
     backgroundColor: ' #247BA0',
     borderColor: ' #0A2463',
