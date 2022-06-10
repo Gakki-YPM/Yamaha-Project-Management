@@ -49,7 +49,7 @@ const createEmployee = (req, res) =>{
         if(err){
             throw err;
         } else {
-            res.render('tabelaFuncionarios');
+            res.render('novo');
         }
     });
 }

@@ -1,26 +1,28 @@
-let btnCreateFunction = document.getElementById('createFunction');
+//import swal from 'sweetalert';
 
-btnCreateFunction.addEventListener('click', () =>{
+// let btnCreateFunction = document.getElementById('createFunction');
 
-        var title = document.getElementById("functitulo").value;
-        var area = document.getElementById("funcarea").value;
+// btnCreateFunction.addEventListener('click', () =>{
 
-    if(title && area){
-        var url = "/role";
-        $.ajax({
-            type: "POST",
-            url: url,
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            data: JSON.stringify(
-                {
-                    "Titulo": title,
-                    "Area": area
-                }
-            )
-        });
-        alert('Função cadastrada com sucesso!');
-    } else {
-        alert('Por favor preencha todos os campos!');
-    }
-});
+//         var title = document.getElementById("functitulo").value;
+//         var area = document.getElementById("funcarea").value;
+
+//     if(title && area){
+//         var url = "/role";
+//         $.ajax({
+//             type: "POST",
+//             url: url,
+//             contentType: "application/json; charset=utf-8",
+//             dataType: "json",
+//             data: JSON.stringify(
+//                 {
+//                     "Titulo": title,
+//                     "Area": area
+//                 }
+//             ),
+//             success: function(){
+//                 alert('YES');
+//             }
+//         })
+//     }
+// });

@@ -8,6 +8,7 @@
     <meta name="description" content="Home da ferramenta Yamaha Project Management">
     <meta name="tags" content="PMS, Yamaha, Projetos">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/5df07a7fcc.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
@@ -80,7 +81,7 @@
           <img src="../Imagens/user_img.png" alt="">
         </div>
       </div>
-      <form>
+      <form action="/role" method="post">
         <div class="contents">
           <div class="container mt-5">
             <div class="title func">
@@ -102,7 +103,7 @@
               </div>
           <div class="row5">
             <div class="offset-4 col-8 mt-4">
-              <button id="createFunction">Adicionar nova função</button>
+              <button id="createFunction" class="btn">Adicionar nova função</button>
             </div>
           </div>
         </div>

@@ -33,8 +33,8 @@ const getRoleById = (req, res) =>{
 }
 
 const createRole = (req, res) =>{
-    const title = req.body.Titulo;
-    const area = req.body.Area;
+    const title = req.body.functitulo;
+    const area = req.body.funcarea;
 
     const sql = `INSERT INTO Funcao (Titulo, Area) VALUES (?, ?)`;
 
@@ -42,7 +42,7 @@ const createRole = (req, res) =>{
         if(err){
             throw err;
         } else {
-            res.render('novaFuncao');
+            res.render('novo');
         }
     });
 }

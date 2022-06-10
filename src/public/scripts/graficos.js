@@ -1,7 +1,7 @@
 //Gráfico bar
 let barGrafico = document.getElementById('barGrafico');
 const config = {
-    type: 'bar',
+    type: 'line',
     options: {
       plugins: {
           legend: {
@@ -25,12 +25,14 @@ const config = {
     backgroundColor: [
       ' #247BA0',
     ],
+    borderColor: ' #0A2463',
+    fill: true,
   order: 2
   }, {  
     label: 'Workload Needed',
          data: [6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500, 6500],
          type: 'line',
-         borderColor: '	#cccc00',
+         borderColor: '#CCCC00',
   order: 1
   }, {  
     label: 'IT Limitation Internal and third parties',
@@ -64,8 +66,8 @@ const dataPie = {
       'Projeto 5'
     ],
     datasets: [{
-      label: 'Disponibilidade Horas/Funções',
-      data: [500, 50, 100, 100, 100],
+      label: 'Quantidade funcionários por projeto',
+      data: [250, 50, 100, 100, 100],
       backgroundColor: [
         ' #247BA0',
         ' #605F5E',
@@ -90,18 +92,18 @@ let mixedGrafico = document.getElementById('mixedGrafico');
 const confige = {
     type: 'bar',
     data: { labels: [
-        'Projeto 1',
-        'Projeto 2',
-        'Projeto 3',
-        'Projeto 4',
-        'Projeto 5',
-        'Projeto 6',
-        'Projeto 7',
-        'Projeto 8',
-        'Projeto 9',
-        'Projeto 10',
-        'Projeto 11',
-        'Projeto 12'
+      'Janeiro',
+      'Feverreiro',
+      'Marco',
+      'Abril',
+      'Maio',
+      'Junho',
+      'Julho ',
+      'Agosto',
+      'Setembro',
+      'Outubro',
+      'Novembro',
+      'Dezembro'
     ], 
     datasets: [{label: 'Horas/Projetos', data: [5400, 6900, 7200, 7100, 5500, 6000, 5000, 6000, 4500, 5000, 7000, 6000],
     backgroundColor: [
@@ -130,7 +132,7 @@ const labels = [
 const data = {
   labels: labels,
   datasets: [{
-    label: 'Grafico Area',
+    label: 'Quantidades de Projetos',
     fill: true,
     backgroundColor: ' #247BA0',
     borderColor: ' #0A2463',

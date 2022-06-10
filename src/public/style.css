@@ -714,6 +714,15 @@ thead
      background: var(--secundaria);
      margin-bottom: 5px;
  }
+
+ .btns{
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 25px;
+    background: var(--secundaria);
+    margin-bottom: 5px;
+    color: var(--primaria);
+}
  
  .container.mt-5 .rows .row5 .butn .projeto
  {

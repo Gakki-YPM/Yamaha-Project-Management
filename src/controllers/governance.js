@@ -36,16 +36,16 @@ const getGovernanceById = (req, res) =>{
 }
 
 const createGovernance = (req, res) =>{
-    const country = req.body.Pais;
-    const state = req.body.Estado;
-    const address = req.body.Endereco;
+    const country = req.body.govpais;
+    const state = req.body.govest;
+    const address = req.body.govend;
 
     const sql = 'INSERT INTO Governanca (Pais, Estado, Endereco) VALUES (?, ?, ?)';
     db.run(sql, [country, state, address], (err) =>{
         if(err){
             throw err;
         }else{
-            res.render('novaGovernanca');
+            res.render('novo');
         }
     });
 

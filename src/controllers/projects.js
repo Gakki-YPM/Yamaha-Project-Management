@@ -32,21 +32,21 @@ const getProjectById = (req, res) =>{
 }
 
 const createProject = (req, res) =>{
-    const name = req.body.Nome;
-    const description = req.body.Descricao;
-    const principalResponsible = req.body.PrincipalResponsavel;
-    const beginDate = req.body.DataInicial;
-    const finalDate = req.body.DataFinal;
-    const governnaceID = req.body.GovernancaID;
+    const name = req.body.nome;
+    const description = req.body.descricao;
+    const principalResponsible = req.body.responsavel;
+    const beginDate = req.body.datainicial;
+    const finalDate = req.body.datafinal;
+    const governaceID = req.body.governanca;
     const employeeID = req.body.FuncionarioID;
 
     const sql = `INSERT INTO Projeto (NomeProjeto, Descricao, PrincipalResponsavel, DataInicial, DataFinal, GovernancaID, FuncionarioID) VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
-    db.run(sql, [name, description, principalResponsible, beginDate, finalDate, governnaceID, employeeID], (err) =>{
+    db.run(sql, [name, description, principalResponsible, beginDate, finalDate, governaceID, employeeID], (err) =>{
         if(err){
             throw err;
         } else {
-            res.send('Projeto cadastrado com sucesso!');
+            res.render('novo');
         }
     });
 }
