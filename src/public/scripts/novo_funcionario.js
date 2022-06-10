@@ -15,11 +15,11 @@ ajax.onreadystatechange = () =>{
 ajax.send();
 
 
-let ajax2 = new XMLHttpRequest();
-ajax2.open('GET', '/governance', true);
-ajax2.onreadystatechange = () =>{
-    if(ajax2.status === 200 && ajax2.readyState === 4){
-        let response = JSON.parse(ajax2.responseText);
+let funcajax = new XMLHttpRequest();
+funcajax.open('GET', '/governance', true);
+funcajax.onreadystatechange = () =>{
+    if(funcajax.status === 200 && funcajax.readyState === 4){
+        let response = JSON.parse(funcajax.responseText);
         console.log(response);
         for(let i = 0; i < response.length; i++){
             $('.governanca').append(`
@@ -28,7 +28,7 @@ ajax2.onreadystatechange = () =>{
         }
     }
 }
-ajax2.send();
+funcajax.send();
 
 
 
