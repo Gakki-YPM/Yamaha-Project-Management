@@ -73,12 +73,7 @@
           <i class="fa-solid fa-bars"></i>
         </div>
         <!--Barra de pesquisa-->
-        <div class="search">
-          <label>
-            <input type="text" placeholder="Procure Aqui...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </label>
-        </div>
+
         <div class="user">
           <img src="../Imagens/user_img.png" alt="">
         </div>
@@ -95,12 +90,12 @@
             <table>
               <thead>
                 <tr>
-                  <td>Código</td>
-                  <td>Nome</td>
-                  <td>Principal responsável</td>
-                  <td>Governança</td>
-                  <td></td>
-                  <td></td>
+                  <th>Código</th>
+                  <th>Nome</th>
+                  <th>Principal responsável</th>
+                  <th>Governança</th>
+                  <th>Editar</th>
+                  <th>Deletar</th>
                 </tr>
               </thead>
               <tbody id="tableProjects">
@@ -126,11 +121,58 @@
                   <td>Horas para Projeto</td>
                   <td>Estado</td>
                   <td>Quantidade de Projetos</td>
-                  <td></td>
-                  <td></td>
+                  <td>Editar</td>
+                  <td>Deletar</td>
                 </tr>
               </thead>
               <tbody id="tableEmployees">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Tabela de Funções --> 
+        <div class="details">
+          <div class="projectlist project">
+            <div class="cardHeader">
+              <h2>
+                Funções
+              </h2>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Titulo</th>
+                  <th>Área</th>
+                  <th>Editar</th>
+                  <th>Deletar</th>
+                </tr>
+              </thead>
+              <tbody id="tableFunctions">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Tabela de Governanças-->
+        <div class="details">
+          <div class="projectlist project">
+            <div class="cardHeader">
+              <h2>
+                Governanças
+              </h2>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>País</th>
+                  <th>Estado</th>
+                  <th>Endereço</th>
+                  <th>Editar</th>
+                  <th>Deletar</th>
+                </tr>
+              </thead>
+              <tbody id="tableGovernances">
               </tbody>
             </table>
           </div>

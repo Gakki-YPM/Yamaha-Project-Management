@@ -28,15 +28,27 @@ app.use('/governance', governanceRoutes);
 app.use('/role', roleRoutes);
 app.use('/alocation', alocationRoutes);
 
+ app.get('/alteraratt', (req, res) =>{
+    const id = req.query["id"];
+    const db = new sqlite3.Database(dbPath);
+    const sql = `SELECT * FROM Alocacao INNER JOIN Funcionario ON Funcionario.FuncionarioID = Alocacao.FuncionarioID WHERE ProjetoID = ${id}`;
+    db.all(sql, [], (err, rows) =>{
+        if(err){
+            throw err;
+        } else {
+            res.json(rows); 
+        }
+    });
+});
+
 app.get('/alterarprojeto', (req, res) =>{
     const id = req.query["id"];
     const db = new sqlite3.Database(dbPath);
-    const sql = `SELECT * FROM Projeto INNER JOIN Governanca ON Governanca.GovernancaID = Projeto.GovernancaID WHERE ProjetoID = ${id} `;
+    const sql = `SELECT * FROM Projeto INNER JOIN Governanca ON Governanca.GovernancaID = Projeto.GovernancaID WHERE ProjetoID = ${id}`;
     db.get(sql, [], (err, row) =>{
         if(err){
             throw err;
         } else {
-            console.log(row);
             res.render('alterarprojeto', { projeto: row });
         }
     });
@@ -63,16 +75,109 @@ app.post('/updateproject', (req, res) =>{
     });
 });
 
+
+app.post('/updategov', (req, res) =>{
+    const db = new sqlite3.Database(dbPath);
+    const id = req.body.id;
+    const govpais = req.body.govpais;
+    const govest = req.body.govest;
+    const govend = req.body.govend;
+
+    const sql = `UPDATE Governanca SET Pais = ?, Estado = ?, Endereco = ? WHERE GovernancaID = ${id}`;
+
+    db.run(sql, [govpais, govest, govend], (err) =>{
+        if(err){
+            throw err;
+        } else {
+            res.redirect('back');
+        }
+    });
+});
+
+app.post('/updatefunc', (req, res) =>{
+    const db = new sqlite3.Database(dbPath);
+    const id = req.body.id;
+    const functitulo = req.body.functitulo;
+    const funcarea = req.body.funcarea;
+
+    const sql = `UPDATE Funcao SET Titulo = ?, Area = ? WHERE FuncaoID = ${id}`;
+
+    db.run(sql, [functitulo, funcarea], (err) =>{
+        if(err){
+            throw err;
+        } else {
+            res.redirect('back');
+        }
+    });
+});
+
+app.post('/updatealloc', (req, res) =>{
+    const db = new sqlite3.Database(dbPath);
+    const idAloc = req.body.idaloc;
+    const idProject = req.body.idproj;
+    const idEmp = req.body.idfunc;
+    const beginDate = req.body.inicial;
+    const finalDate = req.body.final;
+    const hrJan = req.body.hrjan;
+    const hrFeb = req.body.hrfev;
+    const hrMar = req.body.hrmar;
+    const hrApr = req.body.hrabr;
+    const hrMay = req.body.hrmai;
+    const hrJun = req.body.hrjun;
+    const hrJul = req.body.hrjul;
+    const hrAug = req.body.hrago;
+    const hrSep = req.body.hrset;
+    const hrOct = req.body.hrout;
+    const hrNov = req.body.hrnov;
+    const hrDec = req.body.hrdez;
+
+    const sql = `UPDATE Alocacao SET HorasJaneiro = ?, HorasFevereiro = ?, HorasMarco = ?, HorasAbril = ?, HorasMaio = ?, HorasJunho = ?, HorasJulho = ?, HorasAgosto = ?, HorasSetembro = ?, HorasOutubro = ?, HorasNovembro = ?, HorasDezembro = ?, DataInicialAlocacao = ?, DataFinalAlocacao = ?, ProjetoID = ?, FuncionarioID = ? WHERE AlocacaoID = ${idAloc}`;
+    db.run(sql, [hrJan, hrFeb, hrMar, hrApr, hrMay, hrJun, hrJul, hrAug, hrSep, hrOct, hrNov, hrDec, beginDate, finalDate, idProject, idEmp], (err) =>{
+        if(err){
+            throw err;
+        } else {
+            res.redirect('home');
+        }
+    });
+})
+
 app.get('/alterarfuncionario', (req, res) =>{
     const id = req.query["id"];
     const db = new sqlite3.Database(dbPath);
-    const sql = `SELECT * FROM Funcionario INNER JOIN Governanca ON Governanca.GovernancaID = Funcionario.GovernancaID INNER JOIN Funcao ON Funcao.FuncaoID = Funcionario.FuncaoID WHERE FuncionarioID = ${id}`;
+    const sql = `SELECT * FROM Funcionario LEFT JOIN Governanca ON Governanca.GovernancaID = Funcionario.GovernancaID LEFT JOIN Funcao ON Funcao.FuncaoID = Funcionario.FuncaoID WHERE FuncionarioID = ${id}`;
     db.get(sql, [], (err, row) =>{
         if(err){
             throw err;
         } else {
             console.log(row);
             res.render('alterarfuncionario', { funcionario: row });
+        }
+    });
+});
+
+app.get('/alterarfunc', (req, res) =>{
+    const id = req.query["id"];
+    const db = new sqlite3.Database(dbPath);
+    const sql = `SELECT * FROM Funcao WHERE FuncaoID = ${id}`;
+    db.get(sql, [], (err, row) =>{
+        if(err){
+            throw err;
+        } else {
+            console.log(row);
+            res.render('alterarfunc', { funcao: row });
+        }
+    });
+});
+
+app.get('/alterargov', (req, res) =>{
+    const id = req.query["id"];
+    const db = new sqlite3.Database(dbPath);
+    const sql = `SELECT * FROM Governanca WHERE GovernancaID = ${id}`;
+    db.get(sql, [], (err, row) =>{
+        if(err){
+            throw err;
+        } else {
+            res.render(`alterargov`, { gov: row });
         }
     });
 });
@@ -100,6 +205,19 @@ app.post('/updateemployee', (req, res) =>{
     });
 });
 
+app.post('/deleteatt', (req, res) =>{
+    const db = new sqlite3.Database(dbPath);
+    const id = req.body.alocacao;
+    const sql = `DELETE FROM Alocacao WHERE AlocacaoID = ${id}`;
+    db.run(sql, [], (err) =>{
+        if(err){
+            throw err;
+        } else {
+            res.send();
+        }
+    });
+});
+
 app.post('/deleteproject', (req, res) =>{
     const db = new sqlite3.Database(dbPath);
     const id = req.body.id;
@@ -117,6 +235,32 @@ app.post('/deleteemployee', (req, res) =>{
     const db = new sqlite3.Database(dbPath);
     const id = req.body.id;
     const sql = `DELETE FROM Funcionario WHERE FuncionarioID = ${id}`;
+    db.run(sql, [], (err) =>{
+        if(err){
+            throw err;
+        } else {
+            res.send();
+        }
+    });
+});
+
+app.post('/deletefunc', (req, res) =>{
+    const db = new sqlite3.Database(dbPath);
+    const id = req.body.id;
+    const sql = `DELETE FROM Funcao WHERE FuncaoID = ${id}`;
+    db.run(sql, [], (err) =>{
+        if(err){
+            throw err;
+        } else {
+            res.send();
+        }
+    });
+});
+
+app.post('/deletegov', (req, res) =>{
+    const db = new sqlite3.Database(dbPath);
+    const id = req.body.id;
+    const sql = `DELETE FROM Governanca WHERE GovernancaID = ${id}`;
     db.run(sql, [], (err) =>{
         if(err){
             throw err;
