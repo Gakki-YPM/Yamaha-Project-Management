@@ -14,7 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
     <script src="/scripts/index.js" defer></script>
     <script src="/scripts/graficos.js" defer></script>
-    <title>Gráficos - Yamaha Resource Management</title>
+    <script src="/scripts/atualizargov.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Cadastrar Funcionário</title>
 </head>
 <body>
   <!--Menu vertical e horizontal-->
@@ -70,38 +72,54 @@
         <div class="toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
+
         <div class="user">
           <img src="../Imagens/user_img.png" alt="">
         </div>
       </div>
-      <div class="cardBox exp">
-            <div class="card">
-              <div>
-                <div class="graphs">
-                  <canvas id="barGrafico"></canvas>
-                </div>
-              </div>
+      <!--Entidade de adicinar nova função-->
+      <form action="/updategov" method="post">
+        <div class="contents">
+          <div class="container mt-5">
+            <div class="title">
+              <h1 class="adicionar-func">Alterar Governança</h1>
+              <p id="functext">Altere aqui os dados desta governança</p>
             </div>
-            <!--Tabela de carga Horária-->
             <div class="details">
-              <div class="projectlist mes">
+              <div class="projectlist update">
                 <div class="cardHeader">
                   <h2>
-                    Carga Horária Total / Mês
+                    Informações do Projeto
                   </h2>
                 </div>
                 <table>
                   <thead>
                     <tr>
-                      <td>Mês Referente</td>
-                      <td>Horas Totais</td>
+                      <th>Código</th>
+                      <th>País</th>
+                      <th>Estado</th>
+                      <th>Endereço</th>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <input id="id" name="id" type="hidden" value=<%= funcionario.FuncionarioID %>> 
+                        <input name="placeholder" type="text" disabled value=<%= fu.GovernancaID %>> 
+                      </td>
+                      <td>
+                        <input type="text" name="govpais" id="govpais" placeholder="Ex. Brasil, Argentina, Chile, etc. " value=<%= gov.Pais %> required>
+                      </td>
+                      <td>
+                        <input type="text" name="govest" id="govest" placeholder="Ex. São Paulo, Buenos Aires, etc."  value=<%= gov.Estado %> required>
+                      </td>
+                      <td>
+                        <input type="text" name="govend" id="govend" placeholder="Ex. Rua João Jones, 2803"  value=<%= gov.Endereco %> required>
+                      </td>
                     </tr>
                   </thead>
-                  <tbody id="tableGraph">
-                  </tbody>
                 </table>
-              </div>
+                <button id="createGov" class="btn" onclick="addToast()">Atualizar a Governança.</button>
             </div>
-      </div>
+      </form>
+
 </body>
 </html>
